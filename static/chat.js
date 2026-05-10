@@ -1,4 +1,6 @@
-const ws = new WebSocket(`ws://localhost:8000/ws/${prompt("Enter Username")}`);
+const ws = new WebSocket(
+  `wss://chat-app-test-production.up.railway.app/ws/${prompt("Enter Username")}`
+);
 
 ws.onmessage = (e) => {
     document.getElementById("messages").innerHTML += `<p>${e.data}</p>`;
