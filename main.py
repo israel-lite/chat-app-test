@@ -11,7 +11,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/")
 async def get():
-    return FileResponse("index.html")
+    return FileResponse("chat.html")
 
 async def broadcast(message: str):
     for client in clients:
